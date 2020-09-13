@@ -1,0 +1,173 @@
+.rating {
+    background: $neutral-grey-margenta;
+    margin-bottom: .5rem;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    margin: 1.5rem;
+
+
+    &:first-child {
+        animation: stars 300ms ease;
+    }
+
+    &:nth-child(2) {
+        animation: stars 500ms ease;
+    }
+
+    &:last-child {
+        margin-bottom: 4rem;
+        animation: stars 700ms ease;
+    }
+
+    .stars {
+        margin-bottom: .5rem;
+
+        img {
+            &:not(:last-child) {
+
+                margin-right: .8rem;
+            }
+        }
+    }
+}
+
+
+blockquote {
+    background: $primary-magenta;
+    color: rgba($neutral-grey-margenta, .9);
+    font-size: 1.3rem;
+    padding: 3rem 3.5rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+
+    animation: block 700ms ease-in;
+
+    &:last-child {
+        margin-bottom: 8rem;
+    }
+
+    cite {
+        display: flex;
+        margin-bottom: 3rem;
+
+
+        img {
+            border-radius: 50%;
+            width: 4rem;
+        }
+
+        .name {
+
+            font-style: normal;
+            margin-left: 2rem;
+
+            span {
+                display: block;
+            }
+
+            /*   &--primary {} */
+
+            &--sub {
+                color: rgba($primary-pink, .5);
+            }
+        }
+    }
+
+
+
+
+}
+
+
+//Desktop 
+@media only screen and (min-width: 768px) {
+
+    //Rating box
+    .rating {
+        overflow: hidden;
+        display: flex;
+        padding: 1.5rem;
+        height: 5rem;
+        width: 40rem;
+        position: relative;
+
+        .stars {
+            margin: 0 2rem;
+        }
+    }
+
+    .one {
+        left: 5rem;
+
+    }
+
+    .second {
+        left: 10rem;
+    }
+
+    .third {
+        left: 15rem;
+    }
+
+
+    //Testimonials box
+
+    blockquote {
+        margin-top: 1rem;
+        height: 22rem;
+        overflow: hidden;
+
+        &:nth-child(2) {
+            margin-top: 3rem;
+        }
+
+        &:nth-child(3) {
+            margin-top: 6rem;
+        }
+    }
+}
+
+
+
+.pattern {
+    position: absolute;
+
+
+    &__mobile {
+        display: none;
+    }
+
+    &__top {
+        top: 5rem;
+        left: 0;
+    }
+
+    &__bottom {
+        display: none;
+    }
+}
+
+//Animations
+
+@keyframes stars {
+    0% {
+        opacity: 0;
+        transform: translateX(20rem);
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes block {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

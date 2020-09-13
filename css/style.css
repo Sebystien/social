@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+a {
+  text-decoration: none; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font: 1.5rem "Spartan", helvetica, sans-serif;
+  line-height: 1.6;
+  box-sizing: border-box;
+  position: relative; }
+
+.row {
+  width: 90%;
+  margin: 0 auto; }
+
+.testimonials {
+  padding: 5rem 0; }
+
+.reviews {
+  color: #502050;
+  text-align: center; }
+  .reviews__left h1 {
+    font-size: 3rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    line-height: 1; }
+  .reviews__left p {
+    margin-bottom: 3.2rem; }
+
+@media only screen and (min-width: 768px) {
+  body {
+    height: 100vh; }
+  main {
+    height: 95%;
+    padding-top: 10rem; }
+  .row {
+    max-width: 114rem; }
+  .reviews {
+    display: flex;
+    text-align: left;
+    padding: 5rem 0; }
+    .reviews__left {
+      flex: 1; }
+      .reviews__left h1 {
+        text-align: left;
+        font-size: 4rem;
+        width: 70%;
+        margin: 0 0 2rem; }
+      .reviews__left p {
+        width: 80%; }
+    .reviews__right {
+      flex: 1; }
+  .main--bottom {
+    display: flex;
+    gap: 2rem; } }
+
+.attribution {
+  font-size: 1.2rem;
+  text-align: center; }
+  .attribution a:visited, .attribution a:link {
+    color: #6e29dd; }
+
+.rating {
+  background: #f7f2f7;
+  margin-bottom: .5rem;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  margin: 1.5rem; }
+  .rating:first-child {
+    animation: stars 300ms ease; }
+  .rating:nth-child(2) {
+    animation: stars 500ms ease; }
+  .rating:last-child {
+    margin-bottom: 4rem;
+    animation: stars 700ms ease; }
+  .rating .stars {
+    margin-bottom: .5rem; }
+    .rating .stars img:not(:last-child) {
+      margin-right: .8rem; }
+
+blockquote {
+  background: #502050;
+  color: rgba(247, 242, 247, 0.9);
+  font-size: 1.3rem;
+  padding: 3rem 3.5rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  animation: block 700ms ease-in; }
+  blockquote:last-child {
+    margin-bottom: 8rem; }
+  blockquote cite {
+    display: flex;
+    margin-bottom: 3rem; }
+    blockquote cite img {
+      border-radius: 50%;
+      width: 4rem; }
+    blockquote cite .name {
+      font-style: normal;
+      margin-left: 2rem;
+      /*   &--primary {} */ }
+      blockquote cite .name span {
+        display: block; }
+      blockquote cite .name--sub {
+        color: rgba(238, 104, 164, 0.5); }
+
+@media only screen and (min-width: 768px) {
+  .rating {
+    overflow: hidden;
+    display: flex;
+    padding: 1.5rem;
+    height: 5rem;
+    width: 40rem;
+    position: relative; }
+    .rating .stars {
+      margin: 0 2rem; }
+  .one {
+    left: 5rem; }
+  .second {
+    left: 10rem; }
+  .third {
+    left: 15rem; }
+  blockquote {
+    margin-top: 1rem;
+    height: 22rem;
+    overflow: hidden; }
+    blockquote:nth-child(2) {
+      margin-top: 3rem; }
+    blockquote:nth-child(3) {
+      margin-top: 6rem; } }
+
+.pattern {
+  position: absolute; }
+  .pattern__mobile {
+    display: none; }
+  .pattern__top {
+    top: 5rem;
+    left: 0; }
+  .pattern__bottom {
+    display: none; }
+
+@keyframes stars {
+  0% {
+    opacity: 0;
+    transform: translateX(20rem); }
+  100% {
+    opacity: 100%; } }
+
+@keyframes block {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem); }
+  100% {
+    opacity: 1; } }
